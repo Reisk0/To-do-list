@@ -1,0 +1,138 @@
+
+
+:root { /*fuentes para las variables que apareceran en todo el CSS */
+    --Font:#F3F5FC;
+    --DarkBlue: #002765;
+    --ImputBackground: #e6e8f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+    box-sizing: border-box;
+}
+
+.container{
+width: 100%;
+min-height: 100vh;
+background: linear-gradient(135deg, #153677, #4e085f);
+padding: 10px;
+}
+
+
+.saturn{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: var(--Font);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.todo-app h2 {
+    display: flex;
+    color: var(--DarkBlue);
+    margin-bottom: 3%;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--ImputBackground);
+    border-radius: 40px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {/*casilla de texto donde pondremos las task*/
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+
+.add {/*boton add*/
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 20%;
+    background-color: #ff5945;
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+
+ul li {
+    list-style: none;/*esto le quitara los numeros o lineas que tengan los li*/
+    font-size: 17px;
+    padding: 11px 8px 11px 45px;
+    user-select: none;
+    cursor: pointer;
+    
+}
+
+ul li::before{ /* Aqui es donde crearemos las casillas donde aparecera la palomita de cheque en nuestras tareas
+    El pseudo-elemento ::before en CSS se utiliza para insertar contenido antes del 
+    contenido de un elemento HTML. Es muy útil para agregar elementos decorativos o
+    contenido adicional sin tener que modificar el HTML. Aquí te explico en detalle 
+    cómo funciona y cómo puedes usarlo:*/
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(Icons/square.png);
+    background-size: cover;
+    background-position: center;
+    left: 125px;
+}
+
+ul li.checked {
+    text-decoration: line-through; /*esto hace que el elemento li con la clase checke aparezca rallada como si ya se hubiera completado*/
+    color: #555;
+}
+
+ul li.checked::before {
+    position: absolute;
+    background-image: url(Icons/check.png);
+    height: 28px;
+    width: 38px;
+    left: 120px;
+}
+
+ul li span {
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: 57%;
+    align-self: start;
+    
+
+
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: var(--ImputBackground);
+}
+
