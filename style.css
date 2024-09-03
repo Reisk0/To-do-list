@@ -29,12 +29,12 @@ padding: 10px;
 }
 
 .todo-app{
-    width: 100%;
-    max-width: 540px;
+    width: 100vw;
+    max-width: 78%;
     background: var(--Font);
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
+    padding: 40px/*arriba*/ 30px/*izquierda*/ 40px/*abajo*/;/*padding del recuedro blanco*/
+    border-radius: 25px;
     height: 100%;
 }
 
@@ -76,12 +76,27 @@ input {/*casilla de texto donde pondremos las task*/
 
 }
 
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ff5945;
+    border-radius: 20px;
+    width: 100%; /* Cambiado de 68vw a 100% para ajustar al contenedor padre */
+    max-width: 68vw; /* Agregado para mantener el tamaño máximo */
+}   
+
 ul li {
+    position: relative;
     list-style: none;/*esto le quitara los numeros o lineas que tengan los li*/
     font-size: 17px;
-    padding: 11px 8px 11px 45px;
     user-select: none;
     cursor: pointer;
+    display: flex;
+    padding: 10px 100px 15px 40px;
+    margin: 1%;
+    width: 100%; /* Ajuste para mantener el ancho completo del contenedor ul */
+    
     
 }
 
@@ -97,12 +112,14 @@ ul li::before{ /* Aqui es donde crearemos las casillas donde aparecera la palomi
     background-image: url(Icons/square.png);
     background-size: cover;
     background-position: center;
-    left: 125px;
+    left: 1%;
+    
 }
 
 ul li.checked {
     text-decoration: line-through; /*esto hace que el elemento li con la clase checke aparezca rallada como si ya se hubiera completado*/
     color: #555;
+    
 }
 
 ul li.checked::before {
@@ -110,18 +127,19 @@ ul li.checked::before {
     background-image: url(Icons/check.png);
     height: 28px;
     width: 38px;
-    left: 120px;
+    left: 0px;
 }
 
 ul li span {
-
+    left: 30%;
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 40px;
     height: 40px;
     margin-left: 57%;
-    align-self: start;
+    align-self: flex-start;
+    top: 0%;
     
 
 
