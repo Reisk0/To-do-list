@@ -2,8 +2,9 @@
 
 :root { /*fuentes para las variables que apareceran en todo el CSS */
     --Font:#F3F5FC;
-    --DarkBlue: #002765;
+    --DarkBlue: #7990b5;
     --ImputBackground: #e6e8f1;
+    --Gray:  #495057;
 }
 
 * {
@@ -16,12 +17,11 @@
 .container{
 width: 100%;
 min-height: 100vh;
-background: linear-gradient(135deg, #153677, #4e085f);
+background:   linear-gradient(215.77deg, #c7c1ff 1%, #bbdbf7 65.57%, #efefff 100%);
 padding: 10px;
 }
 
-
-.saturn{
+.saturn{   /*logo de saturno*/
     width: 25px;
     height: 25px;
     margin-left: 10px;
@@ -29,13 +29,15 @@ padding: 10px;
 }
 
 .todo-app{
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     max-width: 78%;
     background: var(--Font);
     margin: 100px auto 20px;
     padding: 40px/*arriba*/ 30px/*izquierda*/ 40px/*abajo*/;/*padding del recuedro blanco*/
     border-radius: 25px;
-    height: 100%;
+   
 }
 
 .todo-app h2 {
@@ -44,7 +46,7 @@ padding: 10px;
     margin-bottom: 3%;
 }
 
-.row{
+.row{/*area donde se encuentra encerrado el boton y casilla para añadir texto*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,7 +61,7 @@ input {/*casilla de texto donde pondremos las task*/
     border: none;
     outline: none;
     background-color: transparent;
-    padding: 10px;
+    padding: 1%;
 }
 
 
@@ -68,8 +70,8 @@ input {/*casilla de texto donde pondremos las task*/
     outline: none;
     height: 35px;
     width: 20%;
-    background-color: #ff5945;
-    color: #ffff;
+    background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+    color: var(--Font);
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -80,7 +82,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: #ff5945;
+    background:   linear-gradient(215.77deg, #c7c1ff 1%, #bbdbf7 65.57%, #efefff 100%);
     border-radius: 20px;
     width: 100%; /* Cambiado de 68vw a 100% para ajustar al contenedor padre */
     max-width: 68vw; /* Agregado para mantener el tamaño máximo */
@@ -96,11 +98,9 @@ ul li {
     padding: 10px 100px 15px 40px;
     margin: 1%;
     width: 100%; /* Ajuste para mantener el ancho completo del contenedor ul */
-    
-    
 }
 
-ul li::before{ /* Aqui es donde crearemos las casillas donde aparecera la palomita de cheque en nuestras tareas
+ul li::before{ /* CASILLAS PARA MARCAR Aqui es donde crearemos las casillas donde aparecera la palomita de cheque en nuestras tareas
     El pseudo-elemento ::before en CSS se utiliza para insertar contenido antes del 
     contenido de un elemento HTML. Es muy útil para agregar elementos decorativos o
     contenido adicional sin tener que modificar el HTML. Aquí te explico en detalle 
@@ -130,7 +130,7 @@ ul li.checked::before {
     left: 0px;
 }
 
-ul li span {
+ul li span { /* X */
     left: 30%;
     display: flex;
     flex-direction: column;
@@ -140,9 +140,6 @@ ul li span {
     margin-left: 57%;
     align-self: flex-start;
     top: 0%;
-    
-
-
     font-size: 22px;
     color: #555;
     line-height: 40px;
@@ -151,6 +148,43 @@ ul li span {
 }
 
 ul li span:hover {
-    background: var(--ImputBackground);
+    background: var(--Font)
 }
 
+
+.copyright {
+    opacity: 0.8;
+    padding: 1%;
+    margin-top: 1%;
+    padding: 3%;
+    color: var(--Gray);
+    text-align: center;
+    height: 1%;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Gray);  
+}
+
+.github {
+    height: 43px;
+    width: 43px;
+    margin-left: 1%;
+}
+
+.linkedin {
+    height: 43px;
+    width: 43px;
+}
+
+@media(max-width: 768px) {
+
+    ul {
+        max-width: 77vw; /* Agregado para mantener el tamaño máximo */;
+    }   
+
+    .todo-app{
+        width: 100vw;
+        max-width: 90%;
+        height: 100%;
+    }
+}    
