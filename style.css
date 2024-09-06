@@ -14,6 +14,39 @@
     box-sizing: border-box;
 }
 
+
+.reloj {
+    position: absolute;
+    display: flex;
+    padding: 1%;
+    width: 90%; /* Cambiado de 68vw a 100% para ajustar al contenedor padre */
+    max-width: 36%;
+    margin: 1% auto;
+    margin-top: 4%;/*separacion del calendario con el todo list*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: inset;/*bordes visible*/
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: var(--Font);
+    color: var(--Gray);
+}
+
+.fecha {
+    margin-left: 5%;
+    width: 60%;
+    display: flex;
+    position: relative
+} 
+
+.tiempo {
+    margin-right: 5%;
+    display: flex;
+    width: 40%;
+    position: relative
+}
+
 .container{
 width: 100%;
 min-height: 100vh;
@@ -37,7 +70,6 @@ padding: 10px;
     margin: 100px auto 20px;
     padding: 40px/*arriba*/ 30px/*izquierda*/ 40px/*abajo*/;/*padding del recuedro blanco*/
     border-radius: 25px;
-   
 }
 
 .todo-app h2 {
@@ -86,6 +118,7 @@ ul {
     border-radius: 20px;
     width: 100%; /* Cambiado de 68vw a 100% para ajustar al contenedor padre */
     max-width: 68vw; /* Agregado para mantener el tamaño máximo */
+    overflow: hidden;/*esto evitara que el contenido salga de la casilla en caso de que sea un texto muy largo*/
 }   
 
 ul li {
@@ -187,4 +220,59 @@ ul li span:hover {
         max-width: 90%;
         height: 100%;
     }
+
+   
+    .reloj {
+        margin-top: 4.5%;/*separacion del calendario con el todo list*/
+        margin-left: 51%;
+        width: 100%; 
+        max-width: 40%;
+        }
 }    
+
+@media(min-width: 770px) { 
+   
+    .reloj {
+        margin-top: 2%;
+        margin-left: 51%;
+        width: 100%; 
+        max-width: 90%;
+        }
+
+} 
+
+@media(min-width: 771px) { 
+   
+    .reloj {
+        margin-top: 2%;
+        margin-left: 52%;
+        width: 80%; 
+        max-width: 36%;
+        }
+
+} 
+
+
+@media (min-width: 900px) {
+    .fecha, .tiempo {
+        font-size: 1.1rem; /* Tamaño más grande en pantallas grandes */
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .fecha, .tiempo {
+        font-size: 1.4rem; /* Tamaño más grande en pantallas grandes */
+    }
+}
+
+@media (min-width: 1450px) {
+    .fecha, .tiempo {
+        font-size: 1.7rem; /* Tamaño más grande en pantallas grandes */
+    }
+
+    .reloj {
+        margin-top: 1%
+    }
+
+}

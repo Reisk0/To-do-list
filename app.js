@@ -37,3 +37,28 @@ function showTask(){
 };
 
 showTask();
+
+const $time=document.querySelector('.tiempo'),
+$fecha= document.querySelector('.fecha');
+
+function Clock(){
+    let date = new Date(),
+    day = date.getDate(),
+    month = date.getMonth() + 1,
+    year = date.getFullYear(),
+    weekday = date.getDay();
+
+    day = ('0'+ day).slice(-2);
+    month =('0'+ month).slice(-2)
+
+    let timeString = date.toLocaleTimeString();
+    $time.innerHTML = timeString;
+
+    let week =['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    let showWeek = (week[weekday])
+    $fecha.innerHTML = `${showWeek} ${day}/${month}/${year}. `
+}
+setInterval(() =>{
+    Clock()
+},1000);
+
