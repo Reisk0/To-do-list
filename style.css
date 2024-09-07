@@ -210,12 +210,7 @@ ul li span:hover {
 }
 
 
-
-
-
-
-
-@media(max-width: 768px) {
+@media(max-width: 768px) {  /*modelo de pantalla para celular*/
 
     ul {
         max-width: 77vw; /* Agregado para mantener el tamaño máximo */;
