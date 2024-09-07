@@ -211,44 +211,9 @@ ul li span:hover {
 
 
 
-@media (max-width: 400px) {
-    .fecha, .tiempo {
-        font-size: 0.5rem; /* Tamaño más grande en pantallas grandes */
-        padding: 2%;
-    }
-
-    .reloj {
-        top: 7%;
-    }
-
-    ul li {
-        
-        font-size: .5rem;
-    }
-
-    ul li span { /* X */
-        left: 25%;
-    }
-
-}
 
 
-@media (max-width: 600px) {
-    .fecha, .tiempo {
-        font-size: 0.5rem; /* Tamaño más grande en pantallas grandes */
-        padding: 2%;
-    }
 
-    .reloj {
-        top: 7%;
-    }
-
-    ul li {
-        
-        font-size: .5rem;
-    }
-
-}
 
 @media(max-width: 768px) {
 
