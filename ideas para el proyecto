@@ -3,3 +3,4 @@ cuando se elimine un task enviarala a una ventana de tareas realizadas junto con
 poder registrar un usuario para poder abrir las tareas de personas diferentes 
 COMPLETADO colocar un reloj y calendario en la parte derecha superior, queda pendiente hacerlo responsive 
 agregar un boton con opciones junto a cada task, editar task, ponerle una etiqueta o simplemente agregarla un comentario
+acceder a la fecha y hora en que se realizo y se palomeo un task
