@@ -18,6 +18,7 @@ function addTask(){
 };
 
 listContainer.addEventListener("click", function(e){
+    e.preventDefault();
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
         saveData();
